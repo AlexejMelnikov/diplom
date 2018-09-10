@@ -144,7 +144,7 @@
 			<h2>Популярные стили рисунка</h2>
 			<div class=row>
 				<div class="col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-					<div class=Fstyles-block>
+					<div class=styles-block>
 						<img src=img/styles-1.jpg alt>
 						<h4>Маслом</h4>
 						<a href>Подробнее</a>
@@ -595,10 +595,10 @@
 			<div class="col-md-10 col-md-offset-1">
 				<form action=mailer/smart.php method=POST>
 					<div class=input-wrapper>
-						<input type=text name=name placeholder="Ваше имя" required>
-						<input type=text name=phone placeholder="Ваш телефон" required>
+						<input type=text name=name placeholder="Ваше имя" pattern="[а-яА-ЯёЁ]{2,64}" required>
+						<input type=text name=phone placeholder="Ваш телефон" pattern="[0-9]{11}" required>
 						<input type=text name=email placeholder="Ваш E-mail">
-						<input class=input-text name=message type=text placeholder="Задайте ваш вопрос здесь" required>
+						<input class=input-text name=message type=text placeholder="Задайте ваш вопрос здесь" pattern="[а-яА-ЯёЁ]{2,64}" required>
 					</div>
 					<button class="button button-order" onclick="yaCounter46630539.reachGoal('btn-consultation'); return true;">Получить консультацию</button>
 				</form>
@@ -663,8 +663,8 @@
 				<h4>Остались вопросы? Закажите обратный звонок</h4>
 				<div class=main-form>
 					<form class=form action=mailer/smart.php method=POST>
-						<input type=text name=name placeholder="Ваше имя" required>
-						<input type=text name=phone placeholder="Ваш телефон" required>
+						<input type=text name=name placeholder="Ваше имя" pattern="[а-яА-ЯёЁ]{2,64}" required>
+						<input type=text name=phone placeholder="Ваш телефон" pattern="[0-9]{11}" required>
 						<button class="button button-order" onclick="yaCounter46630539.reachGoal('btn-consultation'); return true;">Получить консультацию</button>
 					</form>
 				</div>
@@ -694,10 +694,10 @@
 					</div>
 					<div class=main-form>
 						<div class=form>
-							<input type=text name=name placeholder="Ваше имя" required>
-							<input type=text name=phone placeholder="Ваш телефон" required>
+							<input type=text name=name placeholder="Ваше имя" pattern="[а-яА-ЯёЁ]{2,64}" required>
+							<input type=text name=phone placeholder="Ваш телефон" pattern="[0-9]{11}" required>
 							<input type=text name=email placeholder="Ваш e-mail">
-							<textarea name=message placeholder=Комментарий rows=2></textarea>
+							<textarea name=message placeholder=Комментарий pattern="[а-яА-ЯёЁ]{2,64}" rows=2></textarea>
 							<button class="button button-order">Отправить дизайнеру</button>
 						</div>
 					</div>
@@ -708,6 +708,6 @@
 
 	<link rel=stylesheet href=css/bootstrap.css>
 	<link rel=stylesheet href=css/main.css>
-	<script src="js/script.js"></script>
+	<script src="js/dist/bundle.js"></script>
 </body>
 </html>
